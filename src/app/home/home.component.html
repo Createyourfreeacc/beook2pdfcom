@@ -1,0 +1,226 @@
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-content">
+      <div class="logo">
+        <span class="logo-icon">📖</span>
+        <span class="logo-text">Beook2PDF</span>
+      </div>
+      <div class="nav-links">
+        <a (click)="scrollToSection('features'); $event.preventDefault()" class="nav-link" href="#features">Features</a>
+        <a (click)="scrollToSection('installation'); $event.preventDefault()" class="nav-link" href="#installation">Installation</a>
+        <a (click)="scrollToSection('technical'); $event.preventDefault()" class="nav-link" href="#technical">Technical</a>
+        <a href="https://github.com/Createyourfreeacc/beook2pdf" target="_blank" rel="noopener" class="nav-link">
+          GitHub
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-icon">🚧</span>
+        <span>Work in Progress</span>
+      </div>
+      <h1 class="hero-title">Export Beook Content to PDF</h1>
+      <p class="hero-description">
+        A Windows application that exports content from the DRM-protected Beook e-learning platform to PDF format.
+        Extract your learning materials and access them offline.
+      </p>
+      <div class="hero-actions">
+        <a href="https://github.com/Createyourfreeacc/beook2pdf" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+          View on GitHub
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+        <a (click)="scrollToSection('installation'); $event.preventDefault()" class="btn btn-secondary btn-lg" href="#installation">
+          Get Started
+        </a>
+      </div>
+      <div class="hero-requirements">
+        <div class="requirement-item">
+          <span class="requirement-label">Platform:</span>
+          <span class="requirement-value">Windows 10+</span>
+        </div>
+        <div class="requirement-item">
+          <span class="requirement-label">Node.js:</span>
+          <span class="requirement-value">18+</span>
+        </div>
+        <div class="requirement-item">
+          <span class="requirement-label">Framework:</span>
+          <span class="requirement-value">Next.js</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="section features-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Features</h2>
+      <p>Everything you need to export your Beook learning materials</p>
+    </div>
+    <div class="features-grid">
+      @for (feature of features; track feature.title) {
+        <div class="feature-card card">
+          <div class="feature-icon">{{ feature.icon }}</div>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Installation Section -->
+<section id="installation" class="section installation-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Installation & Usage</h2>
+      <p>Get started in minutes</p>
+    </div>
+    <div class="installation-content">
+      <div class="installation-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Clone the Repository</h3>
+            <code class="code-block">git clone https://github.com/Createyourfreeacc/beook2pdf.git</code>
+            <code class="code-block">cd beook2pdf</code>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Install Dependencies</h3>
+            <code class="code-block">npm install</code>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Start Development Server</h3>
+            <code class="code-block">npm run dev</code>
+            <p class="step-note">Then open <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> in your browser.</p>
+          </div>
+        </div>
+      </div>
+      <div class="configuration-card card">
+        <h3>Configuration</h3>
+        <p>The application looks for the Beook database at:</p>
+        <code class="code-block">C:/Users/&#123;username&#125;/AppData/Roaming/ionesoft/beook/release/profiles/2/data/beook_book_v6.sqlite</code>
+        <p class="config-note">If your installation differs, you may need to update the path in the settings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technical Details Section -->
+<section id="technical" class="section technical-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Technical Details</h2>
+      <p>Understanding the encryption and architecture</p>
+    </div>
+    <div class="technical-content">
+      <div class="technical-card card">
+        <h3>Encryption</h3>
+        <p>The Beook application uses multiple layers of encryption:</p>
+        <div class="encryption-details">
+          <div class="encryption-item">
+            <h4>Keystore (.global.keystore)</h4>
+            <ul>
+              <li>Java KeyStore via <code>java.security.KeyStore</code> API</li>
+              <li>JCEKS implementation with PBE (Password-Based Encryption)</li>
+              <li>Key derivation: MD5-based PBKDF</li>
+              <li>Cipher: TripleDES</li>
+            </ul>
+          </div>
+          <div class="encryption-item">
+            <h4>Content Encryption (DESEncrypter)</h4>
+            <ul>
+              <li>Algorithm: DES</li>
+              <li>8-byte initialization vector</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tested Courses Section -->
+<section class="section courses-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Tested Courses</h2>
+      <p>This tool has been tested with the following learning materials</p>
+    </div>
+    <div class="courses-grid">
+      @for (course of testedCourses; track course) {
+        <div class="course-badge">{{ course }}</div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Limitations Section -->
+<section class="section limitations-section">
+  <div class="container">
+    <div class="limitations-card card">
+      <h3>Known Limitations</h3>
+      <ul class="limitations-list">
+        <li>Only tested with few learning materials</li>
+        <li>Quiz content is decrypted but not yet included in PDF output</li>
+        <li>PDF generation uses Puppeteer (may have performance implications for large books)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Beook2PDF</h4>
+        <p>Export DRM-protected Beook content to PDF format.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Links</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Createyourfreeacc/beook2pdf" target="_blank" rel="noopener">GitHub Repository</a></li>
+          <li><a (click)="scrollToSection('features'); $event.preventDefault()" href="#features">Features</a></li>
+          <li><a (click)="scrollToSection('installation'); $event.preventDefault()" href="#installation">Installation</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Disclaimer</h4>
+        <p class="disclaimer">
+          This app, "Beook2Pdf", is an independent product and is not affiliated with Ionesoft, 
+          the publisher and developer of Beook. The use of the word "Beook" does not imply any 
+          official approval or partnership with Ionesoft. This project is for educational purposes only. 
+          Please respect the intellectual property rights of content creators and publishers.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Beook2PDF. Open source project.</p>
+    </div>
+  </div>
+</footer>
+

@@ -1,59 +1,79 @@
-# Beook2pdfcom
+# Beook2PDF Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+A modern, responsive website for the Beook2PDF project built with Angular.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- 🎨 Modern, beautiful UI design
+- 📱 Fully responsive layout
+- ⚡ Fast and optimized
+- 🔒 HTTPS ready with Let's Encrypt
+- 🚀 Production-ready deployment configuration
 
-```bash
-ng serve
-```
+## Development
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Prerequisites
 
-## Code scaffolding
+- Node.js 18+ 
+- npm 9+
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Installation
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
+### Development Server
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Build for Production
 
 ```bash
-ng test
+npm run build:prod
 ```
 
-## Running end-to-end tests
+The build artifacts will be stored in the `dist/` directory.
 
-For end-to-end (e2e) testing, run:
+## Deployment
 
-```bash
-ng e2e
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions on Linux Mint with Nginx and Let's Encrypt.
+
+### Quick Deployment Steps
+
+1. Build the application: `npm run build:prod`
+2. Configure Nginx (see `nginx.conf`)
+3. Set up SSL with Let's Encrypt: `sudo certbot --nginx -d yourdomain.com`
+4. Deploy files to `/var/www/beook2pdfcom/`
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── home/           # Homepage component
+│   ├── app.ts          # Root component
+│   ├── app.routes.ts   # Routing configuration
+│   └── app.css         # App styles
+├── index.html          # Main HTML file
+└── styles.css          # Global styles
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Technologies Used
 
-## Additional Resources
+- Angular 21
+- TypeScript
+- CSS3 with modern features
+- Nginx (for production)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## License
+
+This project is for educational purposes only. Please respect the intellectual property rights of content creators and publishers.
+
+## Related Project
+
+This website is for the [Beook2PDF](https://github.com/Createyourfreeacc/beook2pdf) project - a Windows application that exports content from the DRM-protected Beook e-learning platform to PDF format.
