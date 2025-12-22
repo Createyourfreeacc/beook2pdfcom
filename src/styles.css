@@ -106,8 +106,13 @@ a {
   transition: color var(--transition-fast);
 }
 
-a:hover {
+a:not(.btn):hover {
   color: var(--primary-dark);
+}
+
+/* Brand */
+.brand-accent {
+  color: #A7CE38;
 }
 
 /* Utility Classes */
@@ -159,6 +164,7 @@ a:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
   background: var(--primary-dark);
+  color: var(--primary-ink);
 }
 
 .btn-secondary {

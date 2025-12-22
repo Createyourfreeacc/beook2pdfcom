@@ -87,7 +87,7 @@ export class HomeComponent {
   readonly faqs = [
     {
       q: 'Is this the official beook app?',
-      a: 'No. Beook2PDF is an independent open source project and is not affiliated with Ionesoft or beook.'
+      a: 'No. This is an independent open source project and is not affiliated with Ionesoft or beook.'
     },
     {
       q: 'Does beook already support offline reading?',
