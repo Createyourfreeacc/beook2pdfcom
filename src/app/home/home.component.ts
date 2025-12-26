@@ -9,31 +9,27 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  readonly downloadUrl = 'https://github.com/Createyourfreeacc/beook2pdf/releases';
+  readonly downloadUrl = 'https://github.com/Createyourfreeacc/Beook2PDF/releases/download/v0.1.0/Beook2PDF-Setup-0.1.0.exe';
   readonly githubUrl = 'https://github.com/Createyourfreeacc/beook2pdf';
   readonly currentYear = new Date().getFullYear();
 
   readonly benefits = [
     {
-      icon: '🛡️',
       title: 'Keep access long-term',
       description:
         'A PDF archive isn’t tied to a platform or a changing licence model. If access changes later, your copy still opens.'
     },
     {
-      icon: '📦',
       title: 'Use any device or reader',
       description:
         'Read on older Windows, Linux, tablets, or the e-reader you prefer. PDFs move with you — even to devices beook doesn’t support.'
     },
     {
-      icon: '🗂️',
       title: 'Backup and organize',
       description:
         'Store your books alongside your notes, sync to your own cloud, version them, print them, and keep them organized in your workflow.'
     },
     {
-      icon: '✍️',
       title: 'Make it yours',
       description:
         'Highlight, annotate, copy excerpts, and build your own study documents — within your rights and the content’s licence.'
@@ -42,19 +38,16 @@ export class HomeComponent {
 
   readonly useCases = [
     {
-      icon: '🎓',
       title: 'Students',
       description:
         'Keep course materials accessible across semesters, devices, and apps — and study on whatever you have available.'
     },
     {
-      icon: '🧑‍🏫',
       title: 'Teachers and trainers',
       description:
         'Prepare lesson packs, print handouts, and annotate content while keeping an archive you can reuse year after year.'
     },
     {
-      icon: '🧠',
       title: 'Lifelong learners',
       description:
         'Build a durable reference library for certifications, manuals, and learning content — independent from a single vendor.'
