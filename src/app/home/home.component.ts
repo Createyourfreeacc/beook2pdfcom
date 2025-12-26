@@ -57,17 +57,17 @@ export class HomeComponent {
   readonly steps = [
     {
       number: '1',
-      title: 'Download the Windows app',
+      title: 'Download the app',
       description: 'Get the latest release and run it on Windows 10+.'
     },
     {
       number: '2',
-      title: 'Pick a book from your library',
+      title: 'Pick a book',
       description: 'Select what you want to archive or move to other devices.'
     },
     {
       number: '3',
-      title: 'Export to PDF',
+      title: 'Press Download',
       description: 'Generate a portable PDF you can store, back up, or print.'
     },
     {
@@ -92,7 +92,7 @@ export class HomeComponent {
     },
     {
       q: 'Is it legal to export my books?',
-      a: 'Only export content you have the right to export, and respect local laws and the content’s licence. This site is informational and does not provide legal advice.'
+      a: 'Did anyone really read the Licence? You paid for the content, you should be able to use it as you want. This site is informational and does not provide legal advice.'
     },
     {
       q: 'Where are docs and issues?',
