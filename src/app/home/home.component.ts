@@ -1,104 +1,133 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../services/translation.service';
+import { TranslatePipe } from '../pipes/translate.pipe';
+import { LanguageSwitcherComponent } from '../components/language-switcher/language-switcher.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, LanguageSwitcherComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnDestroy {
   readonly downloadUrl = 'https://github.com/Createyourfreeacc/Beook2PDF/releases/download/v0.1.0/Beook2PDF-Setup-0.1.0.exe';
   readonly githubUrl = 'https://github.com/Createyourfreeacc/beook2pdf';
   readonly currentYear = new Date().getFullYear();
 
-  readonly benefits = [
-    {
-      title: 'Keep access long-term',
-      description:
-        'A PDF archive isn’t tied to a platform or a changing licence model. If access changes later, your copy still opens.'
-    },
-    {
-      title: 'Use any device or reader',
-      description:
-        'Read on older Windows, Linux, tablets, or the e-reader you prefer. PDFs move with you — even to devices beook doesn’t support.'
-    },
-    {
-      title: 'Backup and organize',
-      description:
-        'Store your books alongside your notes, sync to your own cloud, version them, print them, and keep them organized in your workflow.'
-    },
-    {
-      title: 'Make it yours',
-      description:
-        'Highlight, annotate, copy excerpts, and build your own study documents — within your rights and the content’s licence.'
-    }
-  ];
+  private subscription?: Subscription;
+  currentLang = '';
 
-  readonly useCases = [
-    {
-      title: 'Students',
-      description:
-        'Keep course materials accessible across semesters, devices, and apps — and study on whatever you have available.'
-    },
-    {
-      title: 'Teachers and trainers',
-      description:
-        'Prepare lesson packs, print handouts, and annotate content while keeping an archive you can reuse year after year.'
-    },
-    {
-      title: 'Lifelong learners',
-      description:
-        'Build a durable reference library for certifications, manuals, and learning content — independent from a single vendor.'
-    }
-  ];
+  get benefits() {
+    const t = this.translationService.translate.bind(this.translationService);
+    return [
+      {
+        title: t('benefits.items.0.title'),
+        description: t('benefits.items.0.description')
+      },
+      {
+        title: t('benefits.items.1.title'),
+        description: t('benefits.items.1.description')
+      },
+      {
+        title: t('benefits.items.2.title'),
+        description: t('benefits.items.2.description')
+      },
+      {
+        title: t('benefits.items.3.title'),
+        description: t('benefits.items.3.description')
+      }
+    ];
+  }
 
-  readonly steps = [
-    {
-      number: '1',
-      title: 'Download the app',
-      description: 'Get the latest release and run it on Windows 10+.'
-    },
-    {
-      number: '2',
-      title: 'Pick a book',
-      description: 'Select what you want to archive or move to other devices.'
-    },
-    {
-      number: '3',
-      title: 'Press Download',
-      description: 'Generate a portable PDF you can store, back up, or print.'
-    },
-    {
-      number: '4',
-      title: 'Read anywhere',
-      description: 'Open the PDF in your preferred reader and move it to devices you own.'
-    }
-  ];
+  get useCases() {
+    const t = this.translationService.translate.bind(this.translationService);
+    return [
+      {
+        title: t('useCases.items.0.title'),
+        description: t('useCases.items.0.description')
+      },
+      {
+        title: t('useCases.items.1.title'),
+        description: t('useCases.items.1.description')
+      },
+      {
+        title: t('useCases.items.2.title'),
+        description: t('useCases.items.2.description')
+      }
+    ];
+  }
 
-  readonly faqs = [
-    {
-      q: 'Is this the official beook app?',
-      a: 'No. This is an independent open source project and is not affiliated with Ionesoft or beook.'
-    },
-    {
-      q: 'Does beook already support offline reading?',
-      a: 'Yes — and that’s great. Exporting to PDF is mainly about long‑term control and device freedom (not being tied to one app or licence model).'
-    },
-    {
-      q: 'What can I do with the exported PDFs?',
-      a: 'You can open them in standard PDF readers, move them between devices, and annotate or organize them like any other document.'
-    },
-    {
-      q: 'Is it legal to export my books?',
-      a: 'Did anyone really read the Licence? You paid for the content, you should be able to use it as you want. This site is informational and does not provide legal advice.'
-    },
-    {
-      q: 'Where are docs and issues?',
-      a: 'On GitHub — the repo includes documentation and the issue tracker for questions and compatibility notes.'
-    }
-  ];
+  get steps() {
+    const t = this.translationService.translate.bind(this.translationService);
+    return [
+      {
+        number: t('steps.items.0.number'),
+        title: t('steps.items.0.title'),
+        description: t('steps.items.0.description')
+      },
+      {
+        number: t('steps.items.1.number'),
+        title: t('steps.items.1.title'),
+        description: t('steps.items.1.description')
+      },
+      {
+        number: t('steps.items.2.number'),
+        title: t('steps.items.2.title'),
+        description: t('steps.items.2.description')
+      },
+      {
+        number: t('steps.items.3.number'),
+        title: t('steps.items.3.title'),
+        description: t('steps.items.3.description')
+      }
+    ];
+  }
+
+  get faqs() {
+    const t = this.translationService.translate.bind(this.translationService);
+    return [
+      {
+        q: t('faq.items.0.q'),
+        a: t('faq.items.0.a')
+      },
+      {
+        q: t('faq.items.1.q'),
+        a: t('faq.items.1.a')
+      },
+      {
+        q: t('faq.items.2.q'),
+        a: t('faq.items.2.a')
+      },
+      {
+        q: t('faq.items.3.q'),
+        a: t('faq.items.3.a')
+      },
+      {
+        q: t('faq.items.4.q'),
+        a: t('faq.items.4.a')
+      }
+    ];
+  }
+
+  constructor(
+    private translationService: TranslationService,
+    private cdr: ChangeDetectorRef
+  ) {}
+
+  ngOnInit(): void {
+    // Subscribe to language changes to trigger change detection
+    this.subscription = this.translationService.getCurrentLanguage().subscribe(lang => {
+      this.currentLang = lang;
+      this.cdr.markForCheck();
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+  }
 
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);

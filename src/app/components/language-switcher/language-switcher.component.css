@@ -1,0 +1,99 @@
+.language-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.language-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  border-radius: 6px;
+  color: var(--text-secondary, #666);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.15s ease);
+}
+
+.language-button:hover {
+  color: var(--text-primary, #000);
+  border-color: var(--border-color-hover, rgba(0, 0, 0, 0.2));
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.language-button svg {
+  transition: transform var(--transition-fast, 0.15s ease);
+}
+
+.language-button svg.rotated {
+  transform: rotate(180deg);
+}
+
+.language-code {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: white;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text-primary, #000);
+  font-size: 0.875rem;
+  transition: background-color var(--transition-fast, 0.15s ease);
+}
+
+.language-option:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.language-option.active {
+  background: rgba(167, 206, 56, 0.1);
+  color: var(--primary-color, #A7CE38);
+  font-weight: 600;
+}
+
+.language-code-small {
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  min-width: 32px;
+  color: var(--text-secondary, #666);
+}
+
+.language-option.active .language-code-small {
+  color: var(--primary-color, #A7CE38);
+}
+
+.language-name {
+  flex: 1;
+}
+
+.language-option svg {
+  color: var(--primary-color, #A7CE38);
+  flex-shrink: 0;
+}
+
+

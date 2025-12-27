@@ -8,13 +8,13 @@
       </a>
 
       <div class="nav-links">
-        <a (click)="scrollToSection('benefits'); $event.preventDefault()" class="nav-link" href="#benefits">Benefits</a>
-        <a (click)="scrollToSection('how-it-works'); $event.preventDefault()" class="nav-link" href="#how-it-works">How it works</a>
-        <a (click)="scrollToSection('download'); $event.preventDefault()" class="nav-link" href="#download">Download</a>
-        <a (click)="scrollToSection('faq'); $event.preventDefault()" class="nav-link" href="#faq">FAQ</a>
+        <a (click)="scrollToSection('benefits'); $event.preventDefault()" class="nav-link" href="#benefits">{{ 'nav.benefits' | translate }}</a>
+        <a (click)="scrollToSection('how-it-works'); $event.preventDefault()" class="nav-link" href="#how-it-works">{{ 'nav.howItWorks' | translate }}</a>
+        <a (click)="scrollToSection('download'); $event.preventDefault()" class="nav-link" href="#download">{{ 'nav.download' | translate }}</a>
+        <a (click)="scrollToSection('faq'); $event.preventDefault()" class="nav-link" href="#faq">{{ 'nav.faq' | translate }}</a>
 
         <a [href]="githubUrl" target="_blank" rel="noopener" class="nav-link nav-link--subtle">
-          GitHub
+          {{ 'nav.github' | translate }}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
             <polyline points="15 3 21 3 21 9"></polyline>
@@ -22,8 +22,10 @@
           </svg>
         </a>
 
+        <app-language-switcher></app-language-switcher>
+
         <a [href]="downloadUrl" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cta">
-          Download
+          {{ 'nav.downloadBtn' | translate }}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
@@ -42,21 +44,16 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-icon">🌿</span>
-          <span>Portable PDFs from your beook library</span>
+          <span [innerHTML]="'hero.badge' | translate"></span>
         </div>
 
-        <h1 class="hero-title">No lock-in. No limits.</h1>
+        <h1 class="hero-title">{{ 'hero.title' | translate }}</h1>
 
-        <p class="hero-description">
-          The real advantage of Exporting to PDF is independence.<br>
-          A PDF isn’t tied to a vendor licence, access cannot be revoked,<br>
-          it doesn't need updates and it can be used on any device.<br>
-          You keep control of your own study materials.
-        </p>
+        <p class="hero-description" [innerHTML]="'hero.description' | translate"></p>
 
         <div class="hero-actions">
           <a [href]="downloadUrl" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-            Download
+            {{ 'hero.downloadBtn' | translate }}
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <polyline points="7 10 12 15 17 10"></polyline>
@@ -64,22 +61,22 @@
             </svg>
           </a>
           <a (click)="scrollToSection('benefits'); $event.preventDefault()" class="btn btn-secondary btn-lg" href="#benefits">
-            See benefits
+            {{ 'hero.seeBenefitsBtn' | translate }}
           </a>
         </div>
 
         <div class="hero-highlights">
           <div class="highlight">
-            <div class="highlight-title">Windows app</div>
-            <div class="highlight-subtitle">Export runs locally</div>
+            <div class="highlight-title">{{ 'hero.highlights.windowsApp.title' | translate }}</div>
+            <div class="highlight-subtitle">{{ 'hero.highlights.windowsApp.subtitle' | translate }}</div>
           </div>
           <div class="highlight">
-            <div class="highlight-title">Device freedom</div>
-            <div class="highlight-subtitle">e-readers, Linux, unsupported devices</div>
+            <div class="highlight-title">{{ 'hero.highlights.deviceFreedom.title' | translate }}</div>
+            <div class="highlight-subtitle">{{ 'hero.highlights.deviceFreedom.subtitle' | translate }}</div>
           </div>
           <div class="highlight">
-            <div class="highlight-title">Open source</div>
-            <div class="highlight-subtitle">Transparent & auditable</div>
+            <div class="highlight-title">{{ 'hero.highlights.openSource.title' | translate }}</div>
+            <div class="highlight-subtitle">{{ 'hero.highlights.openSource.subtitle' | translate }}</div>
           </div>
         </div>
       </div>
@@ -96,9 +93,9 @@
 <section id="benefits" class="section benefits-section">
   <div class="container">
     <div class="section-header">
-      <h2>Why export to PDF?</h2>
+      <h2>{{ 'benefits.title' | translate }}</h2>
     </div>
-    <p>It’s about ownership, portability, and long-term access.</p>
+    <p>{{ 'benefits.subtitle' | translate }}</p>
 
     <div class="benefits-grid">
       @for (benefit of benefits; track benefit.title) {
@@ -115,9 +112,9 @@
 <section class="section use-cases-section">
   <div class="container">
     <div class="section-header">
-      <h2>Made for learners and educators</h2>
+      <h2>{{ 'useCases.title' | translate }}</h2>
     </div>
-    <p>From classrooms to self-study, this is for people who care about keeping their learning close.</p>
+    <p>{{ 'useCases.subtitle' | translate }}</p>
 
     <div class="use-cases-grid">
       @for (useCase of useCases; track useCase.title) {
@@ -134,9 +131,9 @@
 <section id="how-it-works" class="section how-section">
   <div class="container">
     <div class="section-header">
-      <h2>How it works</h2>
+      <h2>{{ 'steps.title' | translate }}</h2>
     </div>
-    <p>A simple, local workflow.</p>
+    <p>{{ 'steps.subtitle' | translate }}</p>
 
     <div class="steps-grid">
       @for (step of steps; track step.title) {
@@ -155,20 +152,18 @@
   <div class="container">
     <div class="download-card card">
       <div class="download-content">
-        <h2>Download Beook<span class="brand-accent">2</span>PDF</h2>
-        <p>
-          Get the latest release for <strong>Windows 10+</strong>. The PDFs you export can be opened on practically any device.
-        </p>
+        <h2>{{ 'download.title' | translate }}<span class="brand-accent">2</span>PDF</h2>
+        <p [innerHTML]="'download.description' | translate"></p>
 
         <div class="download-actions">
-          <a [href]="downloadUrl" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Download from GitHub</a>
-          <a [href]="githubUrl" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">View source</a>
+          <a [href]="downloadUrl" target="_blank" rel="noopener" class="btn btn-primary btn-lg">{{ 'download.downloadBtn' | translate }}</a>
+          <a [href]="githubUrl" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">{{ 'download.viewSourceBtn' | translate }}</a>
         </div>
 
         <ul class="download-notes">
-          <li><strong>Runs locally</strong>: your library stays on your machine.</li>
-          <li><strong>Portable output</strong>: move PDFs to e-readers, Linux, older Windows versions, or print.</li>
-          <li><strong>Make it yours</strong>: copy/annotate/organize the exported PDF the way you want.</li>
+          <li><strong>{{ 'download.notes.0.title' | translate }}</strong>: {{ 'download.notes.0.text' | translate }}</li>
+          <li><strong>{{ 'download.notes.1.title' | translate }}</strong>: {{ 'download.notes.1.text' | translate }}</li>
+          <li><strong>{{ 'download.notes.2.title' | translate }}</strong>: {{ 'download.notes.2.text' | translate }}</li>
         </ul>
       </div>
     </div>
@@ -179,8 +174,8 @@
 <section id="faq" class="section faq-section">
   <div class="container">
     <div class="section-header">
-      <h2>FAQ</h2>
-      <p>Quick answers before you download.</p>
+      <h2>{{ 'faq.title' | translate }}</h2>
+      <p>{{ 'faq.subtitle' | translate }}</p>
     </div>
 
     <div class="faq-list">
@@ -205,29 +200,28 @@
           <img class="footer-logo-img" src="brand/beook-green-leaf.png" alt="" aria-hidden="true" loading="lazy" />
           <span class="footer-logo-text">Beook<span class="brand-accent">2</span>PDF</span>
         </div>
-        <p class="footer-tagline">Export your beook content to a portable PDF archive you can keep.</p>
+        <p class="footer-tagline">{{ 'footer.tagline' | translate }}</p>
       </div>
 
       <div class="footer-section">
-        <h4>Links</h4>
+        <h4>{{ 'footer.links.title' | translate }}</h4>
         <ul class="footer-links">
-          <li><a [href]="downloadUrl" target="_blank" rel="noopener">Download</a></li>
-          <li><a [href]="githubUrl" target="_blank" rel="noopener">GitHub repository</a></li>
-          <li><a (click)="scrollToSection('faq'); $event.preventDefault()" href="#faq">FAQ</a></li>
+          <li><a [href]="downloadUrl" target="_blank" rel="noopener">{{ 'footer.links.download' | translate }}</a></li>
+          <li><a [href]="githubUrl" target="_blank" rel="noopener">{{ 'footer.links.github' | translate }}</a></li>
+          <li><a (click)="scrollToSection('faq'); $event.preventDefault()" href="#faq">{{ 'footer.links.faq' | translate }}</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
-        <h4>Disclaimer</h4>
+        <h4>{{ 'footer.disclaimer.title' | translate }}</h4>
         <p class="disclaimer">
-          Beook2PDF is an independent project and is not affiliated with Ionesoft or beook. Please respect the intellectual
-          property rights of content creators and only export content you are allowed to export.
+          {{ 'footer.disclaimer.text' | translate }}
         </p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Beook2PDF. Open source project.</p>
+      <p>&copy; {{ currentYear }} {{ 'footer.copyright' | translate }}</p>
     </div>
   </div>
 </footer>

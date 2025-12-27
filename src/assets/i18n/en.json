@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "benefits": "Benefits",
+    "howItWorks": "How it works",
+    "download": "Download",
+    "faq": "FAQ",
+    "github": "GitHub",
+    "downloadBtn": "Download"
+  },
+  "hero": {
+    "badge": "Portable PDFs from your beook library",
+    "title": "No lock-in. No limits.",
+    "description": "The real advantage of Exporting to PDF is independence.<br>A PDF isn't tied to a vendor licence, access cannot be revoked,<br>it doesn't need updates and it can be used on any device.<br>You keep control of your own study materials.",
+    "downloadBtn": "Download",
+    "seeBenefitsBtn": "See benefits",
+    "highlights": {
+      "windowsApp": {
+        "title": "Windows app",
+        "subtitle": "Export runs locally"
+      },
+      "deviceFreedom": {
+        "title": "Device freedom",
+        "subtitle": "e-readers, Linux, unsupported devices"
+      },
+      "openSource": {
+        "title": "Open source",
+        "subtitle": "Transparent & auditable"
+      }
+    }
+  },
+  "benefits": {
+    "title": "Why export to PDF?",
+    "subtitle": "It's about ownership, portability, and long-term access.",
+    "items": [
+      {
+        "title": "Keep access long-term",
+        "description": "A PDF archive isn't tied to a platform or a changing licence model. If access changes later, your copy still opens."
+      },
+      {
+        "title": "Use any device or reader",
+        "description": "Read on older Windows, Linux, tablets, or the e-reader you prefer. PDFs move with you — even to devices beook doesn't support."
+      },
+      {
+        "title": "Backup and organize",
+        "description": "Store your books alongside your notes, sync to your own cloud, version them, print them, and keep them organized in your workflow."
+      },
+      {
+        "title": "Make it yours",
+        "description": "Highlight, annotate, copy excerpts, and build your own study documents — within your rights and the content's licence."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Made for learners and educators",
+    "subtitle": "From classrooms to self-study, this is for people who care about keeping their learning close.",
+    "items": [
+      {
+        "title": "Students",
+        "description": "Keep course materials accessible across semesters, devices, and apps — and study on whatever you have available."
+      },
+      {
+        "title": "Teachers and trainers",
+        "description": "Prepare lesson packs, print handouts, and annotate content while keeping an archive you can reuse year after year."
+      },
+      {
+        "title": "Lifelong learners",
+        "description": "Build a durable reference library for certifications, manuals, and learning content — independent from a single vendor."
+      }
+    ]
+  },
+  "steps": {
+    "title": "How it works",
+    "subtitle": "A simple, local workflow.",
+    "items": [
+      {
+        "number": "1",
+        "title": "Download the app",
+        "description": "Get the latest release and run it on Windows 10+."
+      },
+      {
+        "number": "2",
+        "title": "Pick a book",
+        "description": "Select what you want to archive or move to other devices."
+      },
+      {
+        "number": "3",
+        "title": "Press Download",
+        "description": "Generate a portable PDF you can store, back up, or print."
+      },
+      {
+        "number": "4",
+        "title": "Read anywhere",
+        "description": "Open the PDF in your preferred reader and move it to devices you own."
+      }
+    ]
+  },
+  "download": {
+    "title": "Download Beook",
+    "description": "Get the latest release for <strong>Windows 10+</strong>. The PDFs you export can be opened on practically any device.",
+    "downloadBtn": "Download from GitHub",
+    "viewSourceBtn": "View source",
+    "notes": [
+      {
+        "title": "Runs locally",
+        "text": "your library stays on your machine."
+      },
+      {
+        "title": "Portable output",
+        "text": "move PDFs to e-readers, Linux, older Windows versions, or print."
+      },
+      {
+        "title": "Make it yours",
+        "text": "copy/annotate/organize the exported PDF the way you want."
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Quick answers before you download.",
+    "items": [
+      {
+        "q": "Is this the official beook app?",
+        "a": "No. This is an independent open source project and is not affiliated with Ionesoft or beook."
+      },
+      {
+        "q": "Does beook already support offline reading?",
+        "a": "Yes — and that's great. Exporting to PDF is mainly about long‑term control and device freedom (not being tied to one app or licence model)."
+      },
+      {
+        "q": "What can I do with the exported PDFs?",
+        "a": "You can open them in standard PDF readers, move them between devices, and annotate or organize them like any other document."
+      },
+      {
+        "q": "Is it legal to export my books?",
+        "a": "Did anyone really read the Licence? You paid for the content, you should be able to use it as you want. This site is informational and does not provide legal advice."
+      },
+      {
+        "q": "Where are docs and issues?",
+        "a": "On GitHub — the repo includes documentation and the issue tracker for questions and compatibility notes."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Export your beook content to a portable PDF archive you can keep.",
+    "links": {
+      "title": "Links",
+      "download": "Download",
+      "github": "GitHub repository",
+      "faq": "FAQ"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "text": "Beook2PDF is an independent project and is not affiliated with Ionesoft or beook. Please respect the intellectual property rights of content creators and only export content you are allowed to export."
+    },
+    "copyright": "Beook2PDF. Open source project."
+  }
+}
+

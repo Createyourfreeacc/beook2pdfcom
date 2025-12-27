@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "benefits": "Vantaggi",
+    "howItWorks": "Come funziona",
+    "download": "Scarica",
+    "faq": "FAQ",
+    "github": "GitHub",
+    "downloadBtn": "Scarica"
+  },
+  "hero": {
+    "badge": "PDF portatili dalla tua libreria beook",
+    "title": "Nessun vincolo. Nessun limite.",
+    "description": "Il vero vantaggio dell'esportazione in PDF è l'indipendenza.<br>Un PDF non è legato a una licenza del fornitore, l'accesso non può essere revocato,<br>non necessita di aggiornamenti e può essere utilizzato su qualsiasi dispositivo.<br>Mantieni il controllo dei tuoi materiali di studio.",
+    "downloadBtn": "Scarica",
+    "seeBenefitsBtn": "Vedi i vantaggi",
+    "highlights": {
+      "windowsApp": {
+        "title": "App Windows",
+        "subtitle": "L'esportazione funziona in locale"
+      },
+      "deviceFreedom": {
+        "title": "Libertà del dispositivo",
+        "subtitle": "e-reader, Linux, dispositivi non supportati"
+      },
+      "openSource": {
+        "title": "Open source",
+        "subtitle": "Trasparente e verificabile"
+      }
+    }
+  },
+  "benefits": {
+    "title": "Perché esportare in PDF?",
+    "subtitle": "Si tratta di proprietà, portabilità e accesso a lungo termine.",
+    "items": [
+      {
+        "title": "Mantieni l'accesso a lungo termine",
+        "description": "Un archivio PDF non è legato a una piattaforma o a un modello di licenza in evoluzione. Se l'accesso cambia in seguito, la tua copia si apre comunque."
+      },
+      {
+        "title": "Usa qualsiasi dispositivo o lettore",
+        "description": "Leggi su versioni precedenti di Windows, Linux, tablet o l'e-reader che preferisci. I PDF si muovono con te — anche su dispositivi che beook non supporta."
+      },
+      {
+        "title": "Backup e organizzazione",
+        "description": "Archivia i tuoi libri insieme alle tue note, sincronizzali con il tuo cloud, versionali, stampali e mantienili organizzati nel tuo flusso di lavoro."
+      },
+      {
+        "title": "Rendilo tuo",
+        "description": "Evidenzia, annota, copia estratti e crea i tuoi documenti di studio — entro i tuoi diritti e la licenza del contenuto."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Fatto per studenti ed educatori",
+    "subtitle": "Dalle aule all'autoapprendimento, questo è per chi tiene al proprio apprendimento.",
+    "items": [
+      {
+        "title": "Studenti",
+        "description": "Mantieni i materiali del corso accessibili tra semestri, dispositivi e app — e studia con quello che hai a disposizione."
+      },
+      {
+        "title": "Insegnanti e formatori",
+        "description": "Prepara pacchetti di lezioni, stampa dispense e annota i contenuti mantenendo un archivio che puoi riutilizzare anno dopo anno."
+      },
+      {
+        "title": "Studenti per tutta la vita",
+        "description": "Costruisci una libreria di riferimento duratura per certificazioni, manuali e contenuti di apprendimento — indipendente da un singolo fornitore."
+      }
+    ]
+  },
+  "steps": {
+    "title": "Come funziona",
+    "subtitle": "Un flusso di lavoro semplice e locale.",
+    "items": [
+      {
+        "number": "1",
+        "title": "Scarica l'app",
+        "description": "Ottieni l'ultima versione ed eseguila su Windows 10+."
+      },
+      {
+        "number": "2",
+        "title": "Scegli un libro",
+        "description": "Seleziona cosa vuoi archiviare o spostare su altri dispositivi."
+      },
+      {
+        "number": "3",
+        "title": "Premi Scarica",
+        "description": "Genera un PDF portatile che puoi archiviare, salvare o stampare."
+      },
+      {
+        "number": "4",
+        "title": "Leggi ovunque",
+        "description": "Apri il PDF nel tuo lettore preferito e spostalo sui dispositivi di tua proprietà."
+      }
+    ]
+  },
+  "download": {
+    "title": "Scarica Beook",
+    "description": "Ottieni l'ultima versione per <strong>Windows 10+</strong>. I PDF che esporti possono essere aperti su praticamente qualsiasi dispositivo.",
+    "downloadBtn": "Scarica da GitHub",
+    "viewSourceBtn": "Visualizza sorgente",
+    "notes": [
+      {
+        "title": "Funziona in locale",
+        "text": "la tua libreria rimane sul tuo computer."
+      },
+      {
+        "title": "Output portatile",
+        "text": "sposta i PDF su e-reader, Linux, versioni precedenti di Windows o stampali."
+      },
+      {
+        "title": "Rendilo tuo",
+        "text": "copia/annotare/organizza il PDF esportato come preferisci."
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Risposte rapide prima di scaricare.",
+    "items": [
+      {
+        "q": "Questa è l'app ufficiale beook?",
+        "a": "No. Questo è un progetto open source indipendente e non è affiliato con Ionesoft o beook."
+      },
+      {
+        "q": "beook supporta già la lettura offline?",
+        "a": "Sì — ed è fantastico. L'esportazione in PDF riguarda principalmente il controllo a lungo termine e la libertà del dispositivo (non essere legati a un'app o modello di licenza)."
+      },
+      {
+        "q": "Cosa posso fare con i PDF esportati?",
+        "a": "Puoi aprirli in lettori PDF standard, spostarli tra dispositivi e annotarli o organizzarli come qualsiasi altro documento."
+      },
+      {
+        "q": "È legale esportare i miei libri?",
+        "a": "Qualcuno ha davvero letto la Licenza? Hai pagato per il contenuto, dovresti essere in grado di usarlo come vuoi. Questo sito è informativo e non fornisce consulenza legale."
+      },
+      {
+        "q": "Dove sono documentazione e problemi?",
+        "a": "Su GitHub — il repository include documentazione e il tracker dei problemi per domande e note di compatibilità."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Esporta il tuo contenuto beook in un archivio PDF portatile che puoi conservare.",
+    "links": {
+      "title": "Collegamenti",
+      "download": "Scarica",
+      "github": "Repository GitHub",
+      "faq": "FAQ"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "text": "Beook2PDF è un progetto indipendente e non è affiliato con Ionesoft o beook. Si prega di rispettare i diritti di proprietà intellettuale dei creatori di contenuti ed esportare solo contenuti che sei autorizzato a esportare."
+    },
+    "copyright": "Beook2PDF. Progetto open source."
+  }
+}
+

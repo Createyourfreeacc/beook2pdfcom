@@ -1,0 +1,51 @@
+<div class="language-switcher" #dropdownContainer>
+  <button
+    type="button"
+    class="language-button"
+    (click)="toggleDropdown()"
+    [attr.aria-expanded]="isOpen"
+    aria-label="Select language"
+  >
+    <span class="language-code">{{ currentLanguage.toUpperCase() }}</span>
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      [class.rotated]="isOpen"
+    >
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </button>
+
+  @if (isOpen) {
+    <div class="language-dropdown">
+      @for (lang of supportedLanguages; track lang) {
+        <button
+          type="button"
+          class="language-option"
+          [class.active]="lang === currentLanguage"
+          (click)="selectLanguage(lang)"
+        >
+          <span class="language-code-small">{{ lang.toUpperCase() }}</span>
+          <span class="language-name">{{ getLanguageName(lang) }}</span>
+          @if (lang === currentLanguage) {
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          }
+        </button>
+      }
+    </div>
+  }
+</div>
+
